@@ -1,0 +1,16 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Deals in the past year",
+    "location": "crm.record.tab",
+    "fetch": {
+      "targetFunction": "card-middle-report",
+      "objectTypes": [
+        {
+          "name": "companies",
+          "propertiesToSend": ["name"]
+        }
+      ]
+    }
+  }
+}

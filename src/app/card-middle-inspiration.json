@@ -1,0 +1,17 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Inspirational Quote (Middle)",
+    "location": "crm.record.tab",
+    "fetch": {
+      "targetFunction": "card-middle-inspiration",
+      "objectTypes": [
+        {
+          "name": "contacts",
+          "propertiesToSend": ["firstname"],
+          "actions": []
+        }
+      ]
+    }
+  }
+}

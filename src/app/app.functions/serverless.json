@@ -1,0 +1,42 @@
+{
+  "runtime": "nodejs16.x",
+  "version": "1.0",
+  "appFunctions": {
+    "card-right-quote": {
+      "file": "card-right-quote.js",
+      "secrets": []
+    },
+    "card-middle-inspiration": {
+      "file": "card-middle-inspiration.js",
+      "secrets": []
+    },
+    "card-right-inspiration": {
+      "file": "card-right-inspiration.js",
+      "secrets": []
+    },
+    "card-right-external-records": {
+      "file": "card-right-external-records.js",
+      "secrets": []
+    },
+    "card-middle-component-showcase": {
+      "file": "card-middle-component-showcase.js",
+      "secrets": []
+    },
+    "card-middle-report": {
+      "file": "card-middle-report.js",
+      "secrets": []
+    }
+
+
+
+
+
+      
+  },
+  "endpoints": {
+    "hello": {
+      "file": "api-hello-world.js",
+      "method":"GET"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "crm-card",
+    "data": {
+      "title": "Monday Projects",
+      "location": "crm.record.sidebar",
+      "fetch": {
+        "targetFunction": "card-middle-monday",
+        "objectTypes": [
+          {
+            "name": "deals",
+            "propertiesToSend": ["recordid"]
+          }
+        ]
+      }
+    }
+  }
+  

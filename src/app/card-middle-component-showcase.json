@@ -1,0 +1,25 @@
+{
+    "type": "crm-card",
+    "data": {
+      "title": "Custom Card - Component Showcase",
+      "location": "crm.record.tab",
+      "fetch": {
+        "targetFunction": "card-middle-component-showcase",
+        "objectTypes": [
+          {
+            "name": "contacts",
+            "propertiesToSend": ["firstname","lastname"]
+          },
+          {
+            "name": "companies",
+            "propertiesToSend": []
+          },
+          {
+            "name": "deals",
+            "propertiesToSend": []
+          }
+        ]
+      }
+    }
+  }
+  

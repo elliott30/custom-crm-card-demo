@@ -1,0 +1,17 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Inspirational Quote",
+    "location": "crm.record.sidebar",
+    "fetch": {
+      "targetFunction": "card-right-inspiration",
+      "objectTypes": [
+        {
+          "name": "deals",
+          "propertiesToSend": [],
+          "actions": []
+        }
+      ]
+    }
+  }
+}
