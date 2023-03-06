@@ -1,3 +1,9 @@
+/*
+Currently removed from app.json so it wont appear in portal
+Change to use iFrame instead, or use an editable field component and button that saves a property and refreshes the component.
+*/
+
+
 // For external API calls
 const axios = require('axios');
 
