@@ -40,7 +40,7 @@ if (event && event.type === 'SUBMIT') {
   const { search_term } = event.payload.formState;
 
   try {
-    const { data } = await axios.get(`https://cdn.contentful.com/spaces/cfexampleapi/environments/master/entries?query=paris&access_token=b4c0n73n7fu1`);
+    const { data } = await axios.get(`https://cdn.contentful.com/spaces/cfexampleapi/environments/master/entries?query=${search_term}&access_token=b4c0n73n7fu1`);
 
     let contentfulContent = {
       type: "tile",
