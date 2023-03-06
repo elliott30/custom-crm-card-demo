@@ -1,0 +1,16 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Contentful Search",
+    "location": "crm.record.sidebar",
+    "fetch": {
+      "targetFunction": "card-right-contentful",
+      "objectTypes": [
+        {
+          "name": "tickets",
+          "propertiesToSend": []
+        }
+      ]
+    }
+  }
+}

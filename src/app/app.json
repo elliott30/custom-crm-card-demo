@@ -1,8 +1,8 @@
 {
   "name": "Demo",
   "description": "Collection of CRM Cards and Serverless Functions",
-  "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write","crm.objects.deals.read",
-  "crm.objects.quotes.read"],
+  "scopes": ["crm.objects.contacts.read","crm.objects.deals.read",
+  "crm.objects.quotes.read", "crm.objects.custom.read", "crm.objects.companies.read"],
   "public": false,
   "extensions": {
     "crm": {
@@ -17,15 +17,20 @@
           "file": "./card-right-inspiration.json"
         },
         {
-          "file": "./card-right-external-records.json"
+          "file": "./card-right-associated-records.json"
         },
         {
           "file": "./card-middle-component-showcase.json"
         },
         {
           "file": "./card-middle-report.json"
+        },
+        {
+          "file": "./card-right-contentful.json"
         }
       ]
     }
   }
 }
+
+

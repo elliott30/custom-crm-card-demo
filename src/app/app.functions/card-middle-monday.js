@@ -5,7 +5,7 @@ exports.main = async (context = {}, sendResponse) => {
 
   try {
 
-
+/*
     var data = JSON.stringify({
       "query": "query {items_by_column_values (board_id: 3906981690, column_id: \"integration\", column_value: \"11956120172\") {id name}}"
     });
@@ -15,13 +15,14 @@ exports.main = async (context = {}, sendResponse) => {
     maxBodyLength: Infinity,
       url: 'https://api.monday.com/v2',
       headers: { 
-        'Authorization': PROCESS.ENV.MONDAY_KEY, 
+        'Authorization': 'YOUR-KEY', 
         'Content-Type': 'application/json'
       },
       data : data
     };
     
     const mondayItems = await axios(config);
+*/
 
     const items = await axios.get("https://jsonplaceholder.typicode.com/todos");
 

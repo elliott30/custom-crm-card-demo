@@ -41,7 +41,7 @@ exports.main = async (context = {}, sendResponse) => {
         text: "Get new quote",
         onClick: {
           type: "SERVERLESS_ACTION_HOOK",
-          serverlessFunction: "card-right-quote"
+          serverlessFunction: "card-right-inspiration"
         }
       }
     ];

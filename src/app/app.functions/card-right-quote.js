@@ -3,32 +3,62 @@ exports.main = async (context, sendResponse) => {
   sendResponse({
 
     sections: [
+
       {
-        type: 'text',
-        text: 'Create a quote',
+        "type": "tile",
+        "content": [
+          {
+            "type": "text",
+            "format": "markdown",
+            "text": "**Custom Quotes One**"
+          },
+          {
+            "type": "text",
+            "format": "markdown",
+            "text": "**Published:** Jan 1, 2022"
+          },
+          {
+            "type": "tag",
+            "text": "Published",
+            "variant": "success",
+      
+           },
+           {
+            type: 'button',
+            text: 'View quote',
+            onClick: {
+              type: 'IFRAME',
+              label: 'Create Quote',
+              // Width and height of the iframe (in pixels)
+              width: 700,
+              height: 600,
+              uri: 'https://quotes.demolytics.site/create-quote',
+              label: "View Quote",
+            },
+          }
+        ]
       },
+      
       {
-        type: 'button',
-        text: 'Open iframe',
-        onClick: {
-          type: 'IFRAME',
-          // Width and height of the iframe (in pixels)
-          width: 1200,
-          height: 600,
-          uri: 'https://tuanpham-dev.github.io/react-invoice-generator/',
-        },
-      },
-      {
-        type: 'button',
-        text: 'Open iframe',
-        onClick: {
-          type: 'IFRAME',
-          // Width and height of the iframe (in pixels)
-          width: 12000,
-          height: 600,
-          uri: 'https://quotes.demolytics.site/create-quote',
-        },
+        "type": "buttonRow",
+        "buttons": [
+          {
+            type: 'button',
+            variant: 'primary',
+            text: 'Create quote ',
+            onClick: {
+              type: 'IFRAME',
+              // Width and height of the iframe (in pixels)
+              width: 700,
+              height: 600,
+              uri: 'https://quotes.demolytics.site/create-quote',
+              label: "Create Quote",
+            },
+          },
+          
+        ]
       }
+    
     ],
   });
 };

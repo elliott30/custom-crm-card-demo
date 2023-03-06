@@ -14,8 +14,8 @@
       "file": "card-right-inspiration.js",
       "secrets": []
     },
-    "card-right-external-records": {
-      "file": "card-right-external-records.js",
+    "card-right-associated-records": {
+      "file": "card-right-associated-records.js",
       "secrets": []
     },
     "card-middle-component-showcase": {
@@ -25,9 +25,13 @@
     "card-middle-report": {
       "file": "card-middle-report.js",
       "secrets": []
+    },
+    "card-right-contentful": {
+      "file": "card-right-contentful.js",
+      "secrets": []
     }
 
-
+    
 
 
 
