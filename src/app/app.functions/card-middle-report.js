@@ -23,7 +23,7 @@ exports.main = async (context = {}, sendResponse) => {
 
     const sections = [  {
       "type": "crm::report",
-      "reportId": 93648674,
+      "reportId": 9424660,
     },
     ];
 

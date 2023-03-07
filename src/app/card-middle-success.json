@@ -1,0 +1,25 @@
+{
+    "type": "crm-card",
+    "data": {
+      "title": "Subscription",
+      "location": "crm.record.tab",
+      "fetch": {
+        "targetFunction": "card-middle-success",
+        "objectTypes": [
+          {
+            "name": "contacts",
+            "propertiesToSend": ["firstname","lastname"]
+          },
+          {
+            "name": "companies",
+            "propertiesToSend": []
+          },
+          {
+            "name": "deals",
+            "propertiesToSend": []
+          }
+        ]
+      }
+    }
+  }
+  

@@ -24,6 +24,9 @@
         },
         {
           "file": "./card-middle-report.json"
+        },
+        {
+          "file": "./card-middle-success.json"
         }
       ]
     }

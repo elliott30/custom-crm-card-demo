@@ -29,8 +29,12 @@
     "card-right-contentful": {
       "file": "card-right-contentful.js",
       "secrets": []
+    },
+    "card-middle-success": {
+      "file": "card-middle-success.js",
+      "secrets": []
     }
-
+    
     
 
 
