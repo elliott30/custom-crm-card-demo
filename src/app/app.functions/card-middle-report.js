@@ -2,13 +2,9 @@
 
 exports.main = async (context = {}, sendResponse) => {
 
-  const introMessage = {
-    type: "text",
-    format: "markdown",
-    text: "Amount of deals in the past year",
-  };
-
-  const alertBanner = {
+  sendResponse({
+    sections: [
+{
     "type": "alert",
     "title": "Please note:",
     "body": {
@@ -17,25 +13,18 @@ exports.main = async (context = {}, sendResponse) => {
       "text": "This report can be edited in reports"
       },
       "variant": "info"
-  }
-
-  try {
-
-    const sections = [  {
+},
+{
+  type: "text",
+  format: "markdown",
+  text: "Amount of deals in the past year",
+},
+  
+      {
       "type": "crm::report",
-      "reportId": 9424660,
-    },
-    ];
-
-    sendResponse({ sections: [introMessage, alertBanner, ...sections] });
-  } catch (error) {
-    // "message" will create an error feedback banner when it catches an error
-    sendResponse({
-      message: {
-        type: 'ERROR',
-        body: `Error: ${error.message}`
-      },
-      sections: [introMessage]
-    });
-  }
-};
+      "reportId": 94246220,
+      }
+    ]
+    
+})
+}

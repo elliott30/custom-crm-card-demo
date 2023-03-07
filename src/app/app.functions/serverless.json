@@ -34,12 +34,6 @@
       "file": "card-middle-success.js",
       "secrets": []
     }
-    
-    
-
-
-
-      
   },
   "endpoints": {
     "hello": {

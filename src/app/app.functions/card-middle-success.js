@@ -1,4 +1,19 @@
 exports.main = async (context, sendResponse) => {
+  const { event } = context;
+
+// Handle submit actions
+if (event && event.type === 'SUBMIT') {
+    sendResponse({ 
+      message: {
+        type: 'SUCCESS',
+        body: `Success!`,
+      },
+    });
+};
+
+
+
+  // Make some api calls here, get the data.
   sendResponse({
     sections: [
       {
@@ -148,18 +163,30 @@ exports.main = async (context, sendResponse) => {
         "type": "divider",
         "distance": "small"
       },
+
+      {
+        "type": "divider",
+        "distance": "small"
+      },
       {
         "type": "heading",
-        "text": "Quick Actions"
+        "format": "markdown",
+        "text": "**Actions**"
       },
-      
+      {
+        "type": "heading",
+        "format": "markdown",
+        "text": "*Quick Actions*"
+      },
+      {
+        "type": "tile",
+        "content": [     
       {
         "type": "buttonRow",
         "buttons": [
           {
             "type": "button",
-            "variant": "primary",
-            "text": "Create a ticket",
+            "text": "View account",
             onClick: {
               type: 'IFRAME',
               // Width and height of the iframe (in pixels)
@@ -174,67 +201,140 @@ exports.main = async (context, sendResponse) => {
           },
           {
             "type": "button",
-            "text": "Create a task"
+            "text": "Remind me in 3 days",
+            "onClick": {
+              "type": "SUBMIT",
+              "serverlessFunction": "card-middle-success"
+            }
           },
           {
             "type": "button",
             "variant":"destructive",
-            "text": "Deactivate account"
+            "text": "Deactivate account",
+            "onClick": {
+              "type": "SUBMIT",
+              "serverlessFunction": "card-middle-success"
+            }
+          }
+        ]
+      }]},
+      {
+        "type": "heading",
+        "format": "markdown",
+        "text": "*Add user*"
+      },
+      {
+        "type": "tile",
+        "content": [
+      {
+        "type": "form",
+        "content": [
+          {
+            "type": "input",
+            "name": "adduser_email",
+            "inputType": "text",
+            "label": "Email address",
+            "initialValue": "b.brown@example.com"
+          },
+      {
+        "type": "button",
+        "variant":"primary",
+        "text": "Add user",
+        "onClick": {
+         "type": "SUBMIT",
+         "serverlessFunction": "exampleFunction"
+        }
+       }
+    ]
+  },
+      ]},
+      {
+        "type": "heading",
+        "format": "markdown",
+        "text": "*Deactivate user*"
+      },
+      {
+        "type": "tile",
+        "content": [
+      {
+        "type": "form",
+        "content": [
+      {
+        "type": "select",
+        "name": "deactivate_user",
+        "label": "Select a user",
+        "placeholder": "Select an option",
+        "description": "Please select a user from the list to decativate",
+        "options": [
+          {
+            "value": 1,
+            "label": "Bobby Brown"
+          },
+          {
+            "value": 2,
+            "label": "Sarah Smith"
           }
         ]
       },
       {
-        "type": "divider",
-        "distance": "small"
-      },
-      {
-        "type": "heading",
-        "text": "Create an escalation"
-      },
+        "type": "button",
+        "variant":"destructive",
+        "text": "Deactivate user",
+        "onClick": {
+         "type": "SUBMIT",
+         "serverlessFunction": "exampleFunction"
+        }
+       }
+    ]
+  },
+      ]},
+  {
+    "type": "heading",
+    "format": "markdown",
+    "text": "*Create support escalation*"
+  },
+  {
+    "type": "tile",
+    "content": [
 
       {
         "type": "form",
         "content": [
           {
             "type": "input",
-            "name": "example_input",
+            "name": "escalation_subject",
             "inputType": "text",
-            "label": "Example input field",
+            "label": "Subject",
             "initialValue": "This is the default value for this field."
           },
           {
-            "type": "input",
-            "name": "one",
-            "inputType": "text",
-            "readonly": true,
-            "label": "Input 1"
+            "type": "textarea",
+            "name": "escalation_message",
+            "label": "Message",
+            "initialValue": "This is the default value for this field."
            },
            {
-            "type": "input",
-            "name": "two",
-            "inputType": "text",
-            "label": "Input 2",
-            "initialValue": "default value",
-            "pattern": "[a-zA-Z0-9 ]{4,10}",
-            "validationErrorMessage": "Value must contain only letters and numbers and be between a 4-10 characters"
-           },
-          {
             "type": "button",
             "text": "Submit form",
             "onClick": {
-              "type": "SUBMIT",
-              "serverlessFunction": "exampleFunction"
+             "type": "SUBMIT",
+             "serverlessFunction": "exampleFunction"
             }
-          }
+           }
         ]
-      },
+      }]},
+
+
+
       {
         "type": "divider",
         "distance": "small"
       },
       {
         "type": "heading",
-        "text": "Customer Information"
+        "format": "markdown",
+
+        "text": "**Customer Information**"
       },
       {
         "type": "tile",
