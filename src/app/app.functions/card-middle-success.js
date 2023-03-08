@@ -108,10 +108,10 @@ if (event && event.type === 'SUBMIT') {
           {
             "type": "progressBar",
             "variant": "danger",
-            "valueMax": 10,
+            "valueMax": 9,
             "value": 10,
-            "title": "Usersd",
-            "valueDescription": "10 of 10",
+            "title": "Users",
+            "valueDescription": "9 of 10",
             "showPercentage": false
           }
         ]},
@@ -294,7 +294,7 @@ if (event && event.type === 'SUBMIT') {
               // Width and height of the iframe (in pixels)
               width: 700,
               height: 400,
-              uri: 'https://www.youtube.com/embed/FDumsLFwyNM',
+              uri: 'https://quotes.demolytics.site/create-quote',
             },
           },
           {
