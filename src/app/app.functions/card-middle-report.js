@@ -10,19 +10,14 @@ exports.main = async (context = {}, sendResponse) => {
     "body": {
       "type": "text",
       "format":"markdown",
-      "text": "This report can be edited in reports"
+      "text": "Single object reports are supported. For associated object types, only records associated with the current record are shown."
       },
       "variant": "info"
-},
-{
-  type: "text",
-  format: "markdown",
-  text: "Amount of deals in the past year",
 },
   
       {
       "type": "crm::report",
-      "reportId": 94246220,
+      "reportId": 94244435,
       }
     ]
     

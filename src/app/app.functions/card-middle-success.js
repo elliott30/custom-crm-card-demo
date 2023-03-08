@@ -128,7 +128,65 @@ if (event && event.type === 'SUBMIT') {
 },
 {
   type: 'text',
-  text: 'Display a table of associated object records. This mockup is showing associated deals.',
+  text: 'Displaying external data in a description list component',
+},
+{
+  "type": "tile",
+  "body": [
+{
+  "type": "descriptionList",
+  "direction":"row",
+  "items": [
+    {
+      "label": "ID",
+      "value": {
+        "type": "text",
+        "format": "markdown",
+        "text": "[#00000001](https://www.hubspot.com/)"
+       }
+     },
+    {
+     "label": "Product",
+     "value": "Starter Pack"
+   },
+   {
+     "label": "Start Date",
+     "value": "2/13/2021"
+   }
+  ]
+}
+]
+},
+{
+  "type": "tile",
+  "body": [
+{
+  "type": "descriptionList",
+  "direction":"row",
+  "items": [
+    {
+      "label": "ID",
+      "value": {
+        "type": "text",
+        "format": "markdown",
+        "text": "[#00000001](https://www.hubspot.com/)"
+       }
+     },
+    {
+     "label": "Product",
+     "value": "Starter Pack"
+   },
+   {
+     "label": "Start Date",
+     "value": "2/13/2021"
+   }
+  ]
+}
+]
+},
+{
+  type: 'text',
+  text: 'Display a table of a specific object. Not currently filtered.',
 },
 {
   "type": "crm::table",
@@ -149,16 +207,60 @@ if (event && event.type === 'SUBMIT') {
       {
         "type": "heading",
         "format": "markdown",
-        "text": "**Activities**"
+        "text": "**Reports**"
       },
       {
+        "type": "tile",
+        "content": [
+          {
+            "type": "heading",
+            "format": "markdown",
+            "text": "*Tableau report embed*"
+          },
+          {
+            "type": "text",
+            "format": "markdown",
+            "text": "Tableau allows you to embed reports as an image that refreshes each time the page is loaded."
+          },
+          {
+            "type": "alert",
+            "title": "Please note:",
+            "body": {
+              "type": "text",
+              "text": "This image will only appear if you're logged into Tableau."
+            }
+          },
+          {
+            "type": "image",
+            "src": "https://prod-apsoutheast-a.online.tableau.com/t/demolytics/views/SalesforceSalesCloudSalesPipeline1/Embed_1.png",
+            "alt": "A Welcome Sign sample image",
+            onClick: {
+              type: 'IFRAME',
+              // Width and height of the iframe (in pixels)
+              width: 1200,
+              height: 600,
+              uri: 'https://prod-apsoutheast-a.online.tableau.com/t/demolytics/views/SalesforceSalesCloudSalesPipeline1/Embed_1.png',
+            },
+          }
+        ]
+      },
+      {
+        "type": "tile",
+        "content": [
+          {
+            "type": "heading",
+            "format": "markdown",
+            "text": "*HubSpot single object report*"
+          },
+      {
         type: 'text',
+        "format": "markdown",
         text: 'Embed single object reports, filetered by the record you are on',
       },
       {
         "type": "crm::report",
         "reportId": 94244435,
-      },
+      }]},
       {
         "type": "divider",
         "distance": "small"
@@ -197,7 +299,11 @@ if (event && event.type === 'SUBMIT') {
           },
           {
             "type": "button",
-            "text": "Enroll in workflow"
+            "text": "Enroll in workflow",
+            "onClick": {
+              "type": "SUBMIT",
+              "serverlessFunction": "card-middle-success"
+            }
           },
           {
             "type": "button",
@@ -241,8 +347,8 @@ if (event && event.type === 'SUBMIT') {
         "variant":"primary",
         "text": "Add user",
         "onClick": {
-         "type": "SUBMIT",
-         "serverlessFunction": "exampleFunction"
+          "type": "SUBMIT",
+          "serverlessFunction": "card-middle-success"
         }
        }
     ]
@@ -281,8 +387,8 @@ if (event && event.type === 'SUBMIT') {
         "variant":"destructive",
         "text": "Deactivate user",
         "onClick": {
-         "type": "SUBMIT",
-         "serverlessFunction": "exampleFunction"
+          "type": "SUBMIT",
+          "serverlessFunction": "card-middle-success"
         }
        }
     ]
@@ -317,15 +423,12 @@ if (event && event.type === 'SUBMIT') {
             "type": "button",
             "text": "Submit form",
             "onClick": {
-             "type": "SUBMIT",
-             "serverlessFunction": "exampleFunction"
+              "type": "SUBMIT",
+              "serverlessFunction": "card-middle-success"
             }
            }
         ]
       }]},
-
-
-
       {
         "type": "divider",
         "distance": "small"
@@ -376,8 +479,9 @@ if (event && event.type === 'SUBMIT') {
             }
           }
         ]
-      },
-
+      }
+      
+    
   
 
 
@@ -390,6 +494,8 @@ if (event && event.type === 'SUBMIT') {
     ],
   });
 };
+
+
 
 
 
